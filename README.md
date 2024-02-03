@@ -27,6 +27,12 @@ This is a React-based weather application that provides users with location-base
 
 - If supported by the weather API, the application may include a feature to show historical weather data for a specific date.
 
+## Component Diagram
+
+![Component Diagram](./assets/component-diagram.png)
+
+This diagram illustrates the component architecture of our React-based weather application. It shows the relationships between different components and how data flows through the application. The diagram helps developers understand the overall structure of the application and how each component contributes to its functionality.
+
 ## Technologies Used
 
 - React
