@@ -1,8 +1,42 @@
-# React + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React-based weather application that provides users with location-based weather forecasts, multi-day forecasts, geolocation functionality, unit conversion options, and the ability to view historical weather data (if supported by the weather API).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Location-based Weather
+
+- Users can search for weather forecasts by city name or ZIP code.
+- The application displays current weather conditions, including temperature, humidity, wind speed, etc.
+
+### Forecast for Multiple Days
+
+- Provides a multi-day weather forecast (e.g., a 5-day forecast) for the selected location.
+- Displays forecast details for each day, including high and low temperatures.
+
+### Geolocation
+
+- Implements geolocation to automatically detect the user's current location.
+- Displays the weather forecast for the detected location.
+
+### Unit Conversion
+
+- Allows users to switch between different units of measurement (e.g., Celsius/Fahrenheit, metric/imperial) for temperature, wind speed, etc.
+
+### Historical Weather Data
+
+- If supported by the weather API, the application may include a feature to show historical weather data for a specific date.
+
+## Technologies Used
+
+- React
+- JavaScript
+- CSS (or any styling framework you used)
+- [Insert any additional technologies or libraries you used]
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/weather-app.git
+   ```
