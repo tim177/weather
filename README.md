@@ -33,13 +33,6 @@ This is a React-based weather application that provides users with location-base
 
 This diagram illustrates the component architecture of our React-based weather application. It shows the relationships between different components and how data flows through the application. The diagram helps developers understand the overall structure of the application and how each component contributes to its functionality.
 
-## Technologies Used
-
-- React
-- JavaScript
-- CSS (or any styling framework you used)
-- [Insert any additional technologies or libraries you used]
-
 ## Getting Started
 
 1. Clone the repository:
