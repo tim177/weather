@@ -16,7 +16,7 @@ const SearchInput = ({ onSearch }) => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=${limit}&appid=${apiKey}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=${limit}&appid=${apiKey}`
       );
       console.log("result", response.data[0].lat);
       if (response) {
