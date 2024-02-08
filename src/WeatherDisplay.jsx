@@ -3,7 +3,7 @@ import WeatherDataList from "./components/Card/WeatherDataList";
 import useWeather from "./hooks/useWeather";
 
 const WeatherDisplay = ({ searchQuery }) => {
-  const { weatherData, isLoading, error } = useWeather(
+  const { weatherData, isLoading } = useWeather(
     searchQuery.lat,
     searchQuery.lon
   );
@@ -13,7 +13,6 @@ const WeatherDisplay = ({ searchQuery }) => {
       {isLoading ? (
         <p>Loading...</p>
       ) : weatherData ? (
-        // <Card weatherData={weatherData} />
         <WeatherDataList weatherData={weatherData} />
       ) : (
         <p>No weather data available</p>

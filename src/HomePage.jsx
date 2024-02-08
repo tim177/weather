@@ -19,7 +19,7 @@ function HomePage() {
         </div>
 
         <div className="flex flex-wrap flex-col items-start">
-          {searchQuery && <WeatherDisplay searchQuery={searchQuery} />}
+          {searchQuery ? <WeatherDisplay searchQuery={searchQuery} /> : ""}
         </div>
       </div>
     </div>

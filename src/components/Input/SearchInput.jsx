@@ -4,6 +4,7 @@ import React, { useState } from "react";
 const SearchInput = ({ onSearch }) => {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const apiKey = "066815500438cd9b599f4716e889e12b";
   const limit = "1";
@@ -15,24 +16,23 @@ const SearchInput = ({ onSearch }) => {
     event.preventDefault();
     try {
       setLoading(true);
+      setError(null);
+      onSearch(null);
       const response = await axios.get(
         `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=${limit}&appid=${apiKey}`
       );
-      console.log("result", response.data[0].lat);
+      // console.log("result", response.data[0].lat);
       if (response) {
         const lat = response.data[0].lat;
         const lon = response.data[0].lon;
         onSearch({ lat, lon });
       }
     } catch (error) {
-      console.log("error", error);
+      setError("An error occurred while fetching data", error);
     } finally {
       setLoading(false);
     }
   };
-
-  if (loading) return;
-  <></>;
 
   return (
     <div className="container mx-auto">
@@ -52,6 +52,7 @@ const SearchInput = ({ onSearch }) => {
             Search
           </button>
         </form>
+        {error && <div className="text-red-500">{error}</div>}
       </div>
     </div>
   );

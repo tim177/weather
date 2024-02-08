@@ -5,7 +5,7 @@ function useWeather(lat, lon) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const apiKey = "066815500438cd9b599f4716e889e12b";
-  console.log(lat);
+
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
